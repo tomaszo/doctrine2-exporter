@@ -122,7 +122,7 @@ class Column extends BaseColumn
                 ->write(' *')
                 ->write(' * @return '.$nativeType)
                 ->write(' */')
-                ->write('public function '.$this->getColumnGetterName().'()')
+                ->write('public function get'.$this->getBeautifiedColumnName().'()')
                 ->write('{')
                 ->indent()
                     ->write('return $this->'.$this->getColumnName().';')
